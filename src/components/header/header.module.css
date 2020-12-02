@@ -1,0 +1,35 @@
+@value makerWhite, makerGreen, makerGrey from "../../common/colors.css";
+@value makerLarge from "../../common/size.css";
+
+.header {
+  position: fixed;
+  width: 100%;
+  padding:1em 20em 1em 20em;
+  display: flex;
+  justify-content: space-between;
+  background-color: makerWhite;
+  z-index: 1;
+}
+
+.logo {
+  height: 2em;
+  cursor: pointer;
+  margin-right: 4em;
+}
+
+.title {
+  display: flex;
+}
+
+.register {
+  padding-top: 0.2em;
+  color:makerGrey;
+  font-weight: bold;
+  font-size: makerLarge;
+  text-decoration: none;
+}
+
+.userIcon {
+  width: 2em;
+  margin: 0 0 0 1em;
+}

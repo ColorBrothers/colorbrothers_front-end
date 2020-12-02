@@ -1,0 +1,51 @@
+@value makerWhite, makerGreen from "../../common/colors.css";
+@value makerMedium from "../../common/size.css";
+
+.form {
+}
+
+.inputs{
+  display: flex;
+  justify-content: center;
+}
+
+.input {
+  width: 12em;
+  height: 3.5em;
+  margin:2em 1em;
+  border-radius: 0.5em;
+  border: 3px solid makerGreen;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.inputbox {
+  position: relative;;
+}
+
+.inputTitle {
+  top:20%;
+  left:15%;
+  padding:0 0.5em;
+  color:makerGreen;
+  background-color: makerWhite;
+  position: absolute;
+  font-size: small;
+  font-weight: bold;
+}
+
+.button {
+  font-size: makerMedium;
+  font-weight: bold;
+  width: 10em;
+  height: 3em;
+  border:none;
+  border-radius: 0.2em;
+  color:makerWhite;
+  background-color: makerGreen;
+  cursor: pointer;
+  text-decoration: none;
+}

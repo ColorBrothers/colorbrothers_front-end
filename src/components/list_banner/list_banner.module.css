@@ -1,0 +1,30 @@
+@value makerGreen, makerWhite, makerBlack from "../../common/colors.css";
+@value makerLarge from "../../common/size.css";
+
+.banner {
+  padding-top:5em;
+  background-color: makerBlack;
+  text-align: center;
+}
+
+.image {
+  padding: 3em 0 2em 0;
+}
+
+.line {
+  width: 4em;
+}
+
+.text{
+  margin:0;
+  color: makerWhite;
+}
+
+.button{
+  font-size: makerLarge;
+  margin: 2em;
+  color: makerGreen;
+  background: none;
+  border:none;
+  cursor: pointer;
+}

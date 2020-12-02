@@ -1,0 +1,60 @@
+@value makerWhite, makerGhostGrey, makerGreen, makerGrey from "../../common/colors.css";
+
+.box {
+  /* display: flex; */
+}
+
+.sideBarMenu {
+  margin-right: 2em;
+  width: 16em;
+  height: 40em;
+  border-right: 2px solid makerGhostGrey;
+  margin: 4em 0 0 2em;
+  /* padding: 2em; */
+}
+
+.name,
+.myToken {
+  text-align: center;
+}
+
+h4 {
+  margin:3em 0 0 0.5em;
+}
+
+p {
+  font-size: bold;
+  padding-left: 1em;
+  color: makerGhostGrey;
+}
+
+.image {
+  margin-left: 5.5em;
+  width: 5em;
+  height: 5em;
+}
+
+.colorBar1 {
+  background-color: makerGhostGrey;
+  height: 3px;
+  width: 100%;
+}
+
+.colorBar2 {
+  background-color: makerGhostGrey;
+  width: 100%;
+  height: 3px;
+
+}
+
+.logout {
+  margin-left: 2em;
+  width: 12em;
+  height: 3em;
+  border-radius: 0.5em;
+  color: makerWhite;
+  font-size: 1em;
+  background-color: makerGreen;
+  border:  none;
+  cursor: pointer;
+}

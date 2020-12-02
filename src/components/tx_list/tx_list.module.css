@@ -1,0 +1,13 @@
+@value makerWhite, makerGreen from "../../common/colors.css";
+
+.txListTable {
+  width: 100%;
+  text-align: center;
+}
+
+.txData {
+  height: 2em;
+  padding:0;
+  background-color: makerGreen;
+  color: makerWhite;
+}
