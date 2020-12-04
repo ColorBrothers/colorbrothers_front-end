@@ -9,35 +9,35 @@ import List from "./components/list/list";
 
 function App() {
   const [cars, setCars] = useState([{
-    id:Date.now(),
+    Id:Date.now(),
     Date: Date.now(),
     CarNumber: "11가1111",
     Company: "한성자동차",
     CarName: "소나타",
-    part:"Fender_FR",
-    color:"A5J",
-    description:"안녕하세요",
-    colorMixData: {
-      colorNumber1:"111",
-      colorGram1: "112",
-      colorNumber2:"111",
-      colorGram2: "112",
-      colorNumber3:"111",
-      colorGram3: "112",
-      colorNumber4:"111",
-      colorGram4: "112",
-      colorNumber5:"111",
-      colorGram5: "112",
-      colorNumber6:"111",
-      colorGram6: "112",
-      colorNumber7:"111",
-      colorGram7: "112",
-      colorNumber8:"111",
-      colorGram8: "112",
-      colorNumber9:"111",
-      colorGram9: "112",
-      colorNumber10:"111",
-      colorGram10: "112",
+    Part:"Fender_FR",
+    Color:"A5J",
+    Description:"안녕하세요",
+    ColorMixData: {
+      ColorNumber1:"111",
+      ColorGram1: "112",
+      ColorNumber2:"111",
+      ColorGram2: "112",
+      ColorNumber3:"111",
+      ColorGram3: "112",
+      ColorNumber4:"111",
+      ColorGram4: "112",
+      ColorNumber5:"111",
+      ColorGram5: "112",
+      ColorNumber6:"111",
+      ColorGram6: "112",
+      ColorNumber7:"111",
+      ColorGram7: "112",
+      ColorNumber8:"111",
+      ColorGram8: "112",
+      ColorNumber9:"111",
+      ColorGram9: "112",
+      ColorNumber10:"111",
+      ColorGram10: "112",
     }
   }]);
 
@@ -54,11 +54,11 @@ function App() {
         <Route path="/mypage">
           <Mypage />
         </Route>
-        <Route path="/detail">
-          <Detail />
-        </Route>
-        <Route path="/list">
+        <Route exact path="/list">
           <List />
+        </Route>
+        <Route path="/list/detail">
+          <Detail />
         </Route>
       </Switch>
     </BrowserRouter>

@@ -1,0 +1,8 @@
+.image {
+  background-color: aqua;
+  width: 10em;
+}
+
+.metadata {
+  display: flex;
+}

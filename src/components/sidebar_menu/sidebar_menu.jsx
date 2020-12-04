@@ -22,7 +22,7 @@ const SideBarMenu = () => {
   return(
     <div className={styles.box}>
     <div className={styles.sideBarMenu}>
-        <img className={styles.image} src="/user.png" alt="profile image"/>
+        <img className={styles.image} src="/images//user.png" alt="profile image"/>
         <h3 className={styles.name}>지갑 주소</h3>
         <p className={styles.myToken}>보유 토큰 : 100 PTT</p>
         <button className={styles.logout}>로그 아웃</button>

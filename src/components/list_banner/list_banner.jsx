@@ -6,7 +6,7 @@ const ListBanner = () => {
     <div className={styles.banner}>
       <div className={styles.image}>
         <h2 className={styles.text}>차량이 조회 되었습니다.</h2>
-        <img src="search_image.png" />
+        <img src="/images/search_image.png" />
       </div>
     </div>
   )

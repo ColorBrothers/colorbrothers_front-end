@@ -8,7 +8,7 @@ const Register = () => {
     <>
     <Header />
       <div className={styles.background}>
-        <img className={styles.image} src="mypageLogo.png" />
+        <img className={styles.image} src="/images/mypageLogo.png" />
       </div>
     <div className={styles.mypage}>
       <div className={styles.page}>
