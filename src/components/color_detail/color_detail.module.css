@@ -1,8 +1,44 @@
-.image {
-  background-color: aqua;
-  width: 10em;
+@value makerGreen from "../../common/colors.css";
+
+.colorDetail {
+  width:40em;
+}
+
+.title {
+  text-align: center;
+}
+
+.image{
+  margin-top:2em;
+  width: 20em;
+  height: 15em;
 }
 
 .metadata {
   display: flex;
+}
+
+.subtitle1 {
+  border-bottom: 2px solid makerGreen;
+}
+
+.subtitle2 {
+  display: flex;
+  border-bottom: 2px solid makerGreen;
+}
+
+.data {
+  width: 100%;
+}
+
+.data2 {
+  margin:0 1em 0 0;
+}
+
+h5{
+  margin:1em 1em 1em 1em;
+}
+
+h3{
+  margin-left: 1em;
 }

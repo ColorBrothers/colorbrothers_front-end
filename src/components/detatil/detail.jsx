@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./detail.module.css";
 import Header from "../header/header";
 import ColorDetail from "../color_detail/color_detail";
+import ColorData from "../color_data/color_data";
 
 const Detail = () => {
   return(
@@ -13,8 +14,9 @@ const Detail = () => {
     <div className={styles.mypage}>
       <div className={styles.page}>
         <div className={styles.container}>
-          <ColorDetail/>
+          <ColorDetail />
         </div>
+        <ColorData />
       </div>
     </div>
     </>

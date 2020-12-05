@@ -1,0 +1,24 @@
+@value makerGreen, makerGhostGrey, makerWhite from "../../common/colors.css";
+
+.listData {
+  width: 40em;
+  margin:auto;
+  margin-top:3em;
+}
+
+.colorListTable {
+  width: 100%;
+  height: 5em;
+}
+.colorListData {
+  height: 2.5em;
+  background-color: makerWhite;
+  color: makerGhostGrey;
+  box-shadow: 1px 1px 1px 1px;
+}
+
+.colorListMetaData{
+  text-align: center;
+  height: 3em;
+  border: 5px solid black;
+}
