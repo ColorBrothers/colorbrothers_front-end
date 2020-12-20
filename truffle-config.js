@@ -5,20 +5,20 @@ const HDWalletProvider = require("truffle-hdwallet-provider-klaytn");
 /**
  * Klaytn 네트워크에 컨트랙트를 배포하기 위한 트러플 네트워크 변수입니다.
  */
-const NETWORK_ID = '1001'
+const NETWORK_ID = '1001';
 
 /**
  * URL: 사용할 노드의 URL
  * PRIVATE_KEY: 트랜잭션 수수료를 지불할 계정의 개인키(본인의 개인키를 넣으세요)
  */
-const URL = 'https://api.baobab.klaytn.net:8651'
+const URL = 'https://api.baobab.klaytn.net:8651';
 
 // 충분한 KLAY가 있는 계정의 'Private key'를 truffle-config.js에 복사하세요.
-const PRIVATE_KEY = ''
+const PRIVATE_KEY = '0x0fb0b8bb2c8d523f4a90a9b6ba7d6c5c403636d983a071d083e3960711a2f999';
 
 module.exports = {
   networks: {
-    klaytn: {
+    baobab: {
       provider: () => new HDWalletProvider(PRIVATE_KEY, URL),
       network_id: NETWORK_ID,
       gas: '8500000',

@@ -1,8 +1,12 @@
 const Colbro = artifacts.require('./Colbro.sol')
 const fs = require('fs')
 
+const name = "Colbro";
+const symbol = "CBT";
+const decimals = "18";
+
 module.exports = function (deployer) {
-  deployer.deploy(Colbro)
+  deployer.deploy(Colbro,name, symbol, decimals)
     .then(() => {
     if (Colbro._json) {
       // 1. 최근에 배포한 컨트랙트의 ABI 파일을 'deployedABI'에 기록합니다.

@@ -1,4 +1,4 @@
-pragma solidity ^0.5.0;
+pragma solidity ^0.5.6;
 pragma experimental ABIEncoderV2;
 
 import "caver-js/packages/caver-kct/src/contract/token/KIP7/KIP7.sol";
@@ -10,8 +10,9 @@ contract Colbro is KIP7,KIP7Metadata,KIP7Pausable {
 
     mapping(bytes => Car) public cars;
     mapping(bytes => Color[]) public colors;
+    
     constructor(string memory name, string memory symbol, uint8 decimals) KIP7Metadata(name,symbol,decimals) public {
-        owner = msg.sender;
+      owner = msg.sender;
     }
 
     //컬러데이터
