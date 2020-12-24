@@ -6,6 +6,7 @@ import Register from "./components/register/register";
 import Mypage from "./components/mypage/mypage";
 import Detail from "./components/detatil/detail";
 import List from "./components/list/list";
+import Home from "./components/home/home";
 
 function App() {
   const [cars, setCars] = useState([{
@@ -46,6 +47,9 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/colbro">
           <ColBro />
         </Route>
         <Route path="/register">
