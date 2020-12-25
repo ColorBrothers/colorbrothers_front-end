@@ -1,0 +1,12 @@
+@value makerWhite from "../../common/colors.css";
+
+
+.section{
+  background:url("./login_back.png")center/cover no-repeat;
+  max-width: 100%;
+  max-height: 100em;
+}
+
+.loginBox{
+  background-color: red;
+}

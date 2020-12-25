@@ -1,4 +1,6 @@
 import React, { useState , useRef } from "react";
+import { Link } from "react-router-dom";
+import styles from "./home.module.css";
 import axios from "axios";
 import { useHistory } from "react-router-dom";
 
@@ -21,19 +23,26 @@ const Home = () => {
     })
   }
 
-  return( 
-    <section src="">
-    <form>
-      <div>
-        <input ref={emailRef} type="text" name="email" placeholder="이메일을 입력해주세요" />
-      </div>
-      <div>
-        <input ref={passwordRef} type="text" name="password" placeholder="비밀번호를 입력해주세요" />
-      </div>
-      <button type="submit" onClick={onSubmit}>로그인하기</button>
-    </form>
-    
+  return(
+    <>
+    <section className={styles.section}>
+      <img className={styles.background} src="/images/login_back.png" />
     </section>
+    <div className={styles.loginBox}>
+        <form>
+          <div>
+            <input ref={emailRef} type="text" name="email" placeholder="이메일을 입력해주세요" />
+          </div>
+          <div>
+            <input ref={passwordRef} type="text" name="password" placeholder="비밀번호를 입력해주세요" />
+          </div>
+          <button type="submit" onClick={onSubmit}>로그인하기</button>
+        </form>
+        <Link to="/join">
+          <b>회원가입</b>
+        </Link>
+    </div>
+    </>
   )
 }
 
