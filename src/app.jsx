@@ -7,6 +7,7 @@ import Mypage from "./components/mypage/mypage";
 import Detail from "./components/detatil/detail";
 import List from "./components/list/list";
 import Home from "./components/home/home";
+import Join from './components/join/join';
 
 function App() {
   const [cars, setCars] = useState([{
@@ -48,6 +49,9 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/join">
+          <Join />
         </Route>
         <Route path="/colbro">
           <ColBro />

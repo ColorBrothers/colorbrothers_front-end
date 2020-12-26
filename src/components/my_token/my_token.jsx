@@ -17,20 +17,6 @@ const MyToken = () => {
       <button className={styles.button}>보내기</button>
       </div>
     </form>
-    <hr />
-    <h3>토큰 환전</h3>
-    <form>
-      <input className={styles.input2}type="text"/>
-      <b className={styles.b3}>CBT</b>
-      <button className={styles.button}>환전 하기</button>
-    </form>
-    <hr />
-    <h3>사용료 예치</h3>
-    <form>
-      <input className={styles.input2}type="text"/>
-      <b className={styles.b3}>CBT</b>
-      <button className={styles.button}>구매 하기</button>
-    </form>
     </>
   )
 }

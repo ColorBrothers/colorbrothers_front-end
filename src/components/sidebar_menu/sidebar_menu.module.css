@@ -58,3 +58,8 @@ p {
   border:  none;
   cursor: pointer;
 }
+
+.address{
+  display: flex;
+  justify-content: center;
+}
