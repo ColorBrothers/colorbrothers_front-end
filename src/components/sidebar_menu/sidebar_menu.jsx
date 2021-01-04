@@ -1,39 +1,39 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import styles from "./sidebar_menu.module.css";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import CaverExtKAS from "caver-js-ext-kas";
-require('dotenv').config()
 
 const SideBarMenu = () => {
+  const [wallet, setWallet] = useState(null);
   const history = useHistory();
-  //KAS SDK
-  const caver = new CaverExtKAS();
-  caver.initKASAPI(process.env.CHAIN_ID, process.env.ACCESS_KEY, process.env.SECRET_ACCESS_KEY);
-  
+
   const onLogout = () => {
     axios.get("/api/users/logout");
     history.push("/");
   }
   
   const addWallet = async () => {
-    const account = await caver.kas.wallet.getAccountList();
-    console.log(account);
+    axios.get("/api/kas/addWallet");
+    setWallet();
   };
 
   // useEffect(() => {
-  //   authService
-  //   .onAuthChange(user => {
-  //     if(!user) {
-  //       history.push("/");
+  //   const fetchWallet = async () => {
+  //     try {
+  //       setWallet(null);
+  //       const respons = await axios.get(
+        
+  //       )
+  //     } catch (e) {
+  //       console.log(e)
   //     }
-  //   })
+  //   }
+  //   axios.get("api/users/")
   // });
-  
   return(
     <div className={styles.box}>
     <div className={styles.sideBarMenu}>
-        <img className={styles.image} src="/images//user.png" alt="profile image"/>
+        <img className={styles.image} src="/images/user.png" alt="images"/>
         <div className={styles.address}>
         <button onClick={addWallet}>지갑 생성</button>
         <h3 className={styles.name}>지갑 주소</h3>
