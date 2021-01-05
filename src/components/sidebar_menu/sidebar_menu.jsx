@@ -12,9 +12,9 @@ const SideBarMenu = () => {
     history.push("/");
   }
   
-  const addWallet = async () => {
+  const addWallet = () => {
     axios.get("/api/kas/addWallet");
-    setWallet();
+    // setWallet();
   };
 
   // useEffect(() => {
