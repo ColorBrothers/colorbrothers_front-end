@@ -14,29 +14,26 @@ const SideBarMenu = () => {
   
   const addWallet = () => {
     axios.get("/api/kas/addWallet");
-    // setWallet();
+    window.location.reload();
   };
 
-  // useEffect(() => {
-  //   const fetchWallet = async () => {
-  //     try {
-  //       setWallet(null);
-  //       const respons = await axios.get(
-        
-  //       )
-  //     } catch (e) {
-  //       console.log(e)
-  //     }
-  //   }
-  //   axios.get("api/users/")
-  // });
+  useEffect(() => {
+    const fetchWallet = async () => {
+      try {
+        const respons = await axios.get("/api/users/wallet");
+        setWallet(respons.data.walletAddress);
+      } catch (e) {
+        console.log(e)
+      }
+    }
+    fetchWallet();
+  });
   return(
     <div className={styles.box}>
     <div className={styles.sideBarMenu}>
         <img className={styles.image} src="/images/user.png" alt="images"/>
         <div className={styles.address}>
-        <button onClick={addWallet}>지갑 생성</button>
-        <h3 className={styles.name}>지갑 주소</h3>
+        {wallet? <h3 className={styles.name}>{wallet}</h3> : <button onClick={addWallet}>지갑 생성</button>}
         </div>
         <p className={styles.myToken}>보유 토큰 : 100 PTT</p>
         <button className={styles.logout} onClick={onLogout}>로그 아웃</button>
