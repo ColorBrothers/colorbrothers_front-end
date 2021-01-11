@@ -13,9 +13,18 @@
   /* padding: 2em; */
 }
 
-.name,
+.wallet,
 .myToken {
   text-align: center;
+}
+
+.wallet {
+overflow: hidden;
+text-overflow: ellipsis;
+}
+.wallet:hover {
+background-color: makerGhostGrey;
+overflow: visible;
 }
 
 h4 {

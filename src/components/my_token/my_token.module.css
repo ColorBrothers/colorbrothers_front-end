@@ -35,6 +35,7 @@ h3 {
   height: 3em;
   border: none;
   border-radius: 0.2em;
+  cursor: pointer;
 }
 
 /* -----------------환전하기 */

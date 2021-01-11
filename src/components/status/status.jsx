@@ -4,10 +4,10 @@ import MyToken from "../my_token/my_token";
 import TxList from "../tx_list/tx_list";
 
 
-const Status = () => {
+const Status = ({wallet, tokenBalance}) => {
   return(
     <div className={styles.status}>
-      <MyToken />
+      <MyToken wallet={wallet} tokenBalance={tokenBalance}/>
       <hr />
       <TxList />
     </div>

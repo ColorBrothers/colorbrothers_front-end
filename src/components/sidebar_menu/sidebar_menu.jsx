@@ -1,17 +1,12 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import styles from "./sidebar_menu.module.css";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
-import caver from "../../klaytn/caver";
-import * as config from "../../config";
 
-const DEPLOYED_ADDRESS = config.DEPLOYED_ADDRESS;
-const DEPLOYED_ABI = config.DEPLOYED_ABI;
 
-const SideBarMenu = () => {
-  const contract = new caver.klay.Contract(DEPLOYED_ABI, DEPLOYED_ADDRESS);
-  const [wallet, setWallet] = useState(null);
-  const [tokenBalance, setTokenBalance] = useState(null);
+
+
+const SideBarMenu = ({wallet, tokenBalance}) => {
   const history = useHistory();
 
   const onLogout = () => {
@@ -24,30 +19,15 @@ const SideBarMenu = () => {
     window.location.reload();
   };
 
-  const fetchWallet = async () => {
-    try {
-      //KAS SDK를 활용하여 만든 지갑주소를 백엔드에서 가져오기
-      const respons = await axios.get("/api/users/wallet");
-      setWallet(respons.data.walletAddress);
-      // 콜 데이터를 통한 토큰 수량 가져오기
-      contract.methods.balanceOf(wallet).call().
-      then(balance => {
-      setTokenBalance(balance);
-    })
-    } catch (e) {
-      console.log(e)
-    }
-  }
-  
-  useEffect(() => {
-    fetchWallet();
-  });
+  // useEffect(() => {
+  // });
+
   return(
     <div className={styles.box}>
     <div className={styles.sideBarMenu}>
         <img className={styles.image} src="/images/user.png" alt="images"/>
         <div className={styles.address}>
-        {wallet? <h3 className={styles.name}>{wallet}</h3> : <button onClick={addWallet}>지갑 생성</button>}
+        {wallet? <h3 className={styles.wallet}>{wallet}</h3> : <button onClick={addWallet}>지갑 생성</button>}
         </div>
         <p className={styles.myToken}>보유 토큰 : {tokenBalance}</p>
         <button className={styles.logout} onClick={onLogout}>로그 아웃</button>

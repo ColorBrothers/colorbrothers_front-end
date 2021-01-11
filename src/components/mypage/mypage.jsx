@@ -4,7 +4,7 @@ import Header from "../header/header";
 import SideBarMenu from "../sidebar_menu/sidebar_menu";
 import Status from "../status/status";
 
-const Mypage = () => {
+const Mypage = ({wallet, tokenBalance}) => {
   return(
     <>
     <Header />
@@ -14,8 +14,8 @@ const Mypage = () => {
     <div className={styles.mypage}>
       <div className={styles.page}>
         <div className={styles.container}>
-        <SideBarMenu />
-        <Status />
+        <SideBarMenu wallet={wallet} tokenBalance={tokenBalance}/>
+        <Status wallet={wallet} tokenBalance={tokenBalance}/>
         </div>
       </div>
     </div>
